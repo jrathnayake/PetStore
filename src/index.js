@@ -3,17 +3,30 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthProvider } from "@asgardeo/auth-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const config = {
+  signInRedirectURL: "https://localhost:3000/sign-in",
+  signOutRedirectURL: "https://localhost:3000/",
+  clientID: "JcWOjOqva3R9gnGIoemCmONYgA0a",
+  baseUrl: "https://api.asgardeo.io/t/petstore",
+  scope: [ "openid","profile" ]
+};
 
 root.render(
   <React.StrictMode>
     <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
-    <App />
+    <AuthProvider config={ config }>
+            <App />
+        </AuthProvider>
   </React.StrictMode>
 );
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

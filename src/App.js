@@ -29,7 +29,7 @@ const RightLoginSignupMenu = () => {
   } else {
     menu = <>
       <Nav>
-      <Nav.Link href="#deets">Login</Nav.Link>
+      <Nav.Link onClick={ () => signIn()}>Login</Nav.Link>
       <Nav.Link href="#deets">Sign Up</Nav.Link></Nav>
     </>
   }
