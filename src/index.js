@@ -7,10 +7,10 @@ import { AuthProvider } from "@asgardeo/auth-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const config = {
-  signInRedirectURL: "https://localhost:3000/sign-in",
-  signOutRedirectURL: "https://localhost:3000/",
+  signInRedirectURL: "http://localhost:3000/sign-in",
+  signOutRedirectURL: "http://localhost:3000/",
   clientID: "JcWOjOqva3R9gnGIoemCmONYgA0a",
-  baseUrl: "https://api.asgardeo.io/t/petstore",
+  baseUrl: "http://api.asgardeo.io/t/petstore",
   scope: [ "openid","profile" ]
 };
 
