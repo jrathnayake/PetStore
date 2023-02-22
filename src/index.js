@@ -7,10 +7,10 @@ import { AuthProvider } from "@asgardeo/auth-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const config = {
-  signInRedirectURL: "http://localhost:3000/sign-in",
-  signOutRedirectURL: "http://localhost:3000/",
-  clientID: "JcWOjOqva3R9gnGIoemCmONYgA0a",
-  baseUrl: "http://api.asgardeo.io/t/petstore",
+  signInRedirectURL: "http://localhost:3000",
+  signOutRedirectURL: "http://localhost:3000",
+  clientID: "8r7y4Wyr7o7OPIUGeb6IFTPtyaca",
+  baseUrl: "https://api.asgardeo.io/t/petstore",
   scope: [ "openid","profile" ]
 };
 
@@ -24,9 +24,6 @@ root.render(
         </AuthProvider>
   </React.StrictMode>
 );
-
-
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
