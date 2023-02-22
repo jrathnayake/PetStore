@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from "@asgardeo/auth-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+//Connecting with Asgardeo
 const config = {
   signInRedirectURL: "http://localhost:3000",
   signOutRedirectURL: "http://localhost:3000",
